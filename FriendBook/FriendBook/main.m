@@ -1,0 +1,18 @@
+//
+//  main.m
+//  FriendBook
+//
+//  Created by Asaph Yuan on 9/13/14.
+//  Copyright (c) 2014 Asaph Yuan. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+#import "AYAppDelegate.h"
+
+int main(int argc, char * argv[])
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AYAppDelegate class]));
+    }
+}
