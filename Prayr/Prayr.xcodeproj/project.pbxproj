@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		839EBD381B44D4D7001D6154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EBD371B44D4D7001D6154 /* AppDelegate.swift */; };
+		839EBD3A1B44D4D7001D6154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EBD391B44D4D7001D6154 /* ViewController.swift */; };
+		839EBD3D1B44D4D7001D6154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839EBD3B1B44D4D7001D6154 /* Main.storyboard */; };
+		839EBD401B44D4D7001D6154 /* Prayr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839EBD3E1B44D4D7001D6154 /* Prayr.xcdatamodeld */; };
+		839EBD421B44D4D7001D6154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839EBD411B44D4D7001D6154 /* Assets.xcassets */; };
+		839EBD451B44D4D7001D6154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839EBD431B44D4D7001D6154 /* LaunchScreen.storyboard */; };
+		839EBD501B44D4D7001D6154 /* PrayrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EBD4F1B44D4D7001D6154 /* PrayrTests.swift */; };
+		839EBD5B1B44D4D7001D6154 /* PrayrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EBD5A1B44D4D7001D6154 /* PrayrUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		839EBD4C1B44D4D7001D6154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 839EBD2C1B44D4D7001D6154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 839EBD331B44D4D7001D6154;
+			remoteInfo = Prayr;
+		};
+		839EBD571B44D4D7001D6154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 839EBD2C1B44D4D7001D6154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 839EBD331B44D4D7001D6154;
+			remoteInfo = Prayr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		839EBD341B44D4D7001D6154 /* Prayr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prayr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		839EBD371B44D4D7001D6154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		839EBD391B44D4D7001D6154 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		839EBD3C1B44D4D7001D6154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		839EBD3F1B44D4D7001D6154 /* Prayr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Prayr.xcdatamodel; sourceTree = "<group>"; };
+		839EBD411B44D4D7001D6154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		839EBD441B44D4D7001D6154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		839EBD461B44D4D7001D6154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839EBD4B1B44D4D7001D6154 /* PrayrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		839EBD4F1B44D4D7001D6154 /* PrayrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayrTests.swift; sourceTree = "<group>"; };
+		839EBD511B44D4D7001D6154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839EBD561B44D4D7001D6154 /* PrayrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		839EBD5A1B44D4D7001D6154 /* PrayrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayrUITests.swift; sourceTree = "<group>"; };
+		839EBD5C1B44D4D7001D6154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		839EBD311B44D4D7001D6154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839EBD481B44D4D7001D6154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839EBD531B44D4D7001D6154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		839EBD2B1B44D4D7001D6154 = {
+			isa = PBXGroup;
+			children = (
+				839EBD361B44D4D7001D6154 /* Prayr */,
+				839EBD4E1B44D4D7001D6154 /* PrayrTests */,
+				839EBD591B44D4D7001D6154 /* PrayrUITests */,
+				839EBD351B44D4D7001D6154 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		839EBD351B44D4D7001D6154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				839EBD341B44D4D7001D6154 /* Prayr.app */,
+				839EBD4B1B44D4D7001D6154 /* PrayrTests.xctest */,
+				839EBD561B44D4D7001D6154 /* PrayrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		839EBD361B44D4D7001D6154 /* Prayr */ = {
+			isa = PBXGroup;
+			children = (
+				839EBD371B44D4D7001D6154 /* AppDelegate.swift */,
+				839EBD391B44D4D7001D6154 /* ViewController.swift */,
+				839EBD3B1B44D4D7001D6154 /* Main.storyboard */,
+				839EBD411B44D4D7001D6154 /* Assets.xcassets */,
+				839EBD431B44D4D7001D6154 /* LaunchScreen.storyboard */,
+				839EBD461B44D4D7001D6154 /* Info.plist */,
+				839EBD3E1B44D4D7001D6154 /* Prayr.xcdatamodeld */,
+			);
+			path = Prayr;
+			sourceTree = "<group>";
+		};
+		839EBD4E1B44D4D7001D6154 /* PrayrTests */ = {
+			isa = PBXGroup;
+			children = (
+				839EBD4F1B44D4D7001D6154 /* PrayrTests.swift */,
+				839EBD511B44D4D7001D6154 /* Info.plist */,
+			);
+			path = PrayrTests;
+			sourceTree = "<group>";
+		};
+		839EBD591B44D4D7001D6154 /* PrayrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				839EBD5A1B44D4D7001D6154 /* PrayrUITests.swift */,
+				839EBD5C1B44D4D7001D6154 /* Info.plist */,
+			);
+			path = PrayrUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		839EBD331B44D4D7001D6154 /* Prayr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839EBD5F1B44D4D7001D6154 /* Build configuration list for PBXNativeTarget "Prayr" */;
+			buildPhases = (
+				839EBD301B44D4D7001D6154 /* Sources */,
+				839EBD311B44D4D7001D6154 /* Frameworks */,
+				839EBD321B44D4D7001D6154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Prayr;
+			productName = Prayr;
+			productReference = 839EBD341B44D4D7001D6154 /* Prayr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		839EBD4A1B44D4D7001D6154 /* PrayrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839EBD621B44D4D7001D6154 /* Build configuration list for PBXNativeTarget "PrayrTests" */;
+			buildPhases = (
+				839EBD471B44D4D7001D6154 /* Sources */,
+				839EBD481B44D4D7001D6154 /* Frameworks */,
+				839EBD491B44D4D7001D6154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				839EBD4D1B44D4D7001D6154 /* PBXTargetDependency */,
+			);
+			name = PrayrTests;
+			productName = PrayrTests;
+			productReference = 839EBD4B1B44D4D7001D6154 /* PrayrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		839EBD551B44D4D7001D6154 /* PrayrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839EBD651B44D4D7001D6154 /* Build configuration list for PBXNativeTarget "PrayrUITests" */;
+			buildPhases = (
+				839EBD521B44D4D7001D6154 /* Sources */,
+				839EBD531B44D4D7001D6154 /* Frameworks */,
+				839EBD541B44D4D7001D6154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				839EBD581B44D4D7001D6154 /* PBXTargetDependency */,
+			);
+			name = PrayrUITests;
+			productName = PrayrUITests;
+			productReference = 839EBD561B44D4D7001D6154 /* PrayrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		839EBD2C1B44D4D7001D6154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Asaph Yuan";
+				TargetAttributes = {
+					839EBD331B44D4D7001D6154 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					839EBD4A1B44D4D7001D6154 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 839EBD331B44D4D7001D6154;
+					};
+					839EBD551B44D4D7001D6154 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 839EBD331B44D4D7001D6154;
+					};
+				};
+			};
+			buildConfigurationList = 839EBD2F1B44D4D7001D6154 /* Build configuration list for PBXProject "Prayr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 839EBD2B1B44D4D7001D6154;
+			productRefGroup = 839EBD351B44D4D7001D6154 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				839EBD331B44D4D7001D6154 /* Prayr */,
+				839EBD4A1B44D4D7001D6154 /* PrayrTests */,
+				839EBD551B44D4D7001D6154 /* PrayrUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		839EBD321B44D4D7001D6154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839EBD451B44D4D7001D6154 /* LaunchScreen.storyboard in Resources */,
+				839EBD421B44D4D7001D6154 /* Assets.xcassets in Resources */,
+				839EBD3D1B44D4D7001D6154 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839EBD491B44D4D7001D6154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839EBD541B44D4D7001D6154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		839EBD301B44D4D7001D6154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839EBD401B44D4D7001D6154 /* Prayr.xcdatamodeld in Sources */,
+				839EBD3A1B44D4D7001D6154 /* ViewController.swift in Sources */,
+				839EBD381B44D4D7001D6154 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839EBD471B44D4D7001D6154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839EBD501B44D4D7001D6154 /* PrayrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839EBD521B44D4D7001D6154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839EBD5B1B44D4D7001D6154 /* PrayrUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		839EBD4D1B44D4D7001D6154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 839EBD331B44D4D7001D6154 /* Prayr */;
+			targetProxy = 839EBD4C1B44D4D7001D6154 /* PBXContainerItemProxy */;
+		};
+		839EBD581B44D4D7001D6154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 839EBD331B44D4D7001D6154 /* Prayr */;
+			targetProxy = 839EBD571B44D4D7001D6154 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		839EBD3B1B44D4D7001D6154 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				839EBD3C1B44D4D7001D6154 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		839EBD431B44D4D7001D6154 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				839EBD441B44D4D7001D6154 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		839EBD5D1B44D4D7001D6154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		839EBD5E1B44D4D7001D6154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		839EBD601B44D4D7001D6154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Prayr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaphyuan.Prayr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		839EBD611B44D4D7001D6154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Prayr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaphyuan.Prayr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		839EBD631B44D4D7001D6154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PrayrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaphyuan.PrayrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayr.app/Prayr";
+			};
+			name = Debug;
+		};
+		839EBD641B44D4D7001D6154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PrayrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaphyuan.PrayrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prayr.app/Prayr";
+			};
+			name = Release;
+		};
+		839EBD661B44D4D7001D6154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PrayrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaphyuan.PrayrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Prayr;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		839EBD671B44D4D7001D6154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PrayrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asaphyuan.PrayrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Prayr;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		839EBD2F1B44D4D7001D6154 /* Build configuration list for PBXProject "Prayr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839EBD5D1B44D4D7001D6154 /* Debug */,
+				839EBD5E1B44D4D7001D6154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		839EBD5F1B44D4D7001D6154 /* Build configuration list for PBXNativeTarget "Prayr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839EBD601B44D4D7001D6154 /* Debug */,
+				839EBD611B44D4D7001D6154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		839EBD621B44D4D7001D6154 /* Build configuration list for PBXNativeTarget "PrayrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839EBD631B44D4D7001D6154 /* Debug */,
+				839EBD641B44D4D7001D6154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		839EBD651B44D4D7001D6154 /* Build configuration list for PBXNativeTarget "PrayrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839EBD661B44D4D7001D6154 /* Debug */,
+				839EBD671B44D4D7001D6154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		839EBD3E1B44D4D7001D6154 /* Prayr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				839EBD3F1B44D4D7001D6154 /* Prayr.xcdatamodel */,
+			);
+			currentVersion = 839EBD3F1B44D4D7001D6154 /* Prayr.xcdatamodel */;
+			path = Prayr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 839EBD2C1B44D4D7001D6154 /* Project object */;
+}
