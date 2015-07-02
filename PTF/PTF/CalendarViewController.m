@@ -64,12 +64,13 @@
     
     //Parse query
     PFQuery *query = [PFQuery queryWithClassName:@"EventDates"];
-    [query whereKeyExists:(self.typeOfVolunteer)];
+//    [query whereKeyExists:(self.typeOfVolunteer)];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
             // Do something with the found objects
             for (PFObject *object in objects) {
+                NSLog(@"%@", object);
                 if ([[object objectForKey:self.typeOfVolunteer] isEqual: @""]){
                     [self.redDates addObject:[object objectForKey:@"date"]];
                 }
