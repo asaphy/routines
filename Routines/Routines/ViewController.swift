@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    println("I can't wait to push this project to GH")
+    print("I can't wait to push this project to GH")
     // Do any additional setup after loading the view, typically from a nib.
   }
 
