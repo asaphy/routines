@@ -124,7 +124,7 @@ to enjoy, to love.” - Marcus Aurelius</string>
                                     <action selector="skipButton:" destination="2Wi-Ms-r9n" eventType="touchUpInside" id="R11-SO-B39"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drink Water" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-yu-4c1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-yu-4c1">
                                 <rect key="frame" x="68" y="146" width="184" height="50"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -136,8 +136,8 @@ to enjoy, to love.” - Marcus Aurelius</string>
                                     <color key="titleColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1:59" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kng-eB-Dww">
-                                <rect key="frame" x="121" y="272" width="79" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kng-eB-Dww">
+                                <rect key="frame" x="55" y="272" width="215" height="59"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -147,6 +147,8 @@ to enjoy, to love.” - Marcus Aurelius</string>
                     </view>
                     <navigationItem key="navigationItem" id="WXS-yG-dzw"/>
                     <connections>
+                        <outlet property="habitLabel" destination="t2g-yu-4c1" id="2yM-Jr-pHx"/>
+                        <outlet property="habitTimeLabel" destination="kng-eB-Dww" id="HbL-0d-gEY"/>
                         <outlet property="taskCompletedButton" destination="YMi-51-tnU" id="zqr-e7-aF9"/>
                     </connections>
                 </viewController>

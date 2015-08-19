@@ -15,6 +15,7 @@
 		838F07381B84C8B9004F1E22 /* RoutinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F07371B84C8B9004F1E22 /* RoutinesTests.swift */; };
 		838F07431B84C8B9004F1E22 /* RoutinesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F07421B84C8B9004F1E22 /* RoutinesUITests.swift */; };
 		838F07511B84DED5004F1E22 /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F07501B84DED5004F1E22 /* RoutineViewController.swift */; };
+		838F07531B84E329004F1E22 /* routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F07521B84E329004F1E22 /* routine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		838F07421B84C8B9004F1E22 /* RoutinesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesUITests.swift; sourceTree = "<group>"; };
 		838F07441B84C8B9004F1E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838F07501B84DED5004F1E22 /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
+		838F07521B84E329004F1E22 /* routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = routine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				838F07221B84C8B9004F1E22 /* AppDelegate.swift */,
 				838F07241B84C8B9004F1E22 /* ViewController.swift */,
 				838F07261B84C8B9004F1E22 /* Main.storyboard */,
+				838F07521B84E329004F1E22 /* routine.swift */,
 				838F07291B84C8B9004F1E22 /* Assets.xcassets */,
 				838F07501B84DED5004F1E22 /* RoutineViewController.swift */,
 				838F072B1B84C8B9004F1E22 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				838F07251B84C8B9004F1E22 /* ViewController.swift in Sources */,
 				838F07511B84DED5004F1E22 /* RoutineViewController.swift in Sources */,
+				838F07531B84E329004F1E22 /* routine.swift in Sources */,
 				838F07231B84C8B9004F1E22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
