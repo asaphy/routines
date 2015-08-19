@@ -12,31 +12,35 @@ class RoutineViewController: UIViewController {
 
   @IBOutlet weak var habitTimeLabel: UILabel!
   @IBOutlet weak var habitLabel: UILabel!
+  
+  @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var taskCompletedButton: UIButton!
+  @IBOutlet weak var skipButton: UIButton!
+  struct Habit {
+    var habitName: String
+    var habitPic: String
+    var habitCategory: String
+    var habitTime: Int
+  }
+  
+  let data = [
+    Habit(habitName: "Water", habitPic: "water.png", habitCategory: "Physical", habitTime: 120),
+    Habit(habitName: "7 Min Workout", habitPic: "water.png", habitCategory: "Physical", habitTime: 420)
+  ]
   var timer = 0
-    override func viewDidLoad() {
+  var task = 0
+  var myTimer: NSTimer?
+  
+  override func viewDidLoad() {
         super.viewDidLoad()
-      
-      
-      struct Habit {
-        var habitName: String
-        var habitPic: String
-        var habitCategory: String
-        var habitTime: Int
-      }
-      
-      let water = Habit(habitName: "Water", habitPic: "water.png", habitCategory: "Physical", habitTime: 120)
-      self.view.backgroundColor = UIColor(patternImage: UIImage(named: water.habitPic)!)
-      self.habitLabel.text = water.habitName
-      timer = water.habitTime
-      print(timer)
-      _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countdown"), userInfo: nil, repeats: true)
-
+      doneButton.hidden = true
 
       taskCompletedButton.backgroundColor = UIColor.clearColor()
       taskCompletedButton.layer.cornerRadius = 10
       taskCompletedButton.layer.borderWidth = 1
       taskCompletedButton.layer.borderColor = UIColor.whiteColor().CGColor
+      myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countdown"), userInfo: nil, repeats: true)
+      populateView(data[task])
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,10 +54,14 @@ class RoutineViewController: UIViewController {
   }
   
   @IBAction func skipButton(sender: AnyObject) {
+    newHabit()
   }
   
+  @IBAction func habitCompletedButton(sender: AnyObject) {
+    newHabit()
+  }
+  @IBOutlet weak var doneButton: UIButton!
   func countdown() {
-    print(timer)
     if (timer > 0){
       timer--
       self.habitTimeLabel.text = stringFromTimer(timer)
@@ -69,4 +77,34 @@ class RoutineViewController: UIViewController {
     return String(format: "%0.2d:%0.2d", minutes, seconds)
   }
   
+  func populateView(habit:Habit) -> () {
+    self.view.backgroundColor = UIColor(patternImage: UIImage(named: habit.habitPic)!)
+    self.habitLabel.text = habit.habitName
+    timer = habit.habitTime
+  }
+  
+  func newHabit() -> (){
+    task++
+    if(task < data.count){
+      populateView(data[task])
+    }
+    else{
+      myTimer!.invalidate()
+      self.habitTimeLabel.text = ""
+      self.habitLabel.text = "8 days in a row!"
+      cancelButton.hidden = true
+      skipButton.hidden = true
+      taskCompletedButton.hidden = true
+      doneButton.backgroundColor = UIColor.clearColor()
+      doneButton.layer.cornerRadius = 10
+      doneButton.layer.borderWidth = 1
+      doneButton.layer.borderColor = UIColor.whiteColor().CGColor
+      doneButton.hidden = false
+      
+    }
+  }
+  
+  @IBAction func donePushed(sender: AnyObject) {
+    self.dismissViewControllerAnimated(true, completion: nil)
+  }
 }
