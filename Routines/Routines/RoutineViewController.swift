@@ -21,11 +21,91 @@ class RoutineViewController: UIViewController {
     var habitPic: String
     var habitCategory: String
     var habitTime: Int
+    var flexible: Bool
+    var minSec: Int
   }
   
   let data = [
-    Habit(habitName: "Water", habitPic: "water.png", habitCategory: "Physical", habitTime: 120),
-    Habit(habitName: "7 Min Workout", habitPic: "water.png", habitCategory: "Physical", habitTime: 420)
+    Habit(
+      habitName: "Water",
+      habitPic: "water.png",
+      habitCategory: "Physical",
+      habitTime: 180,
+      flexible: true,
+      minSec: 60
+    ),
+    Habit(
+      habitName: "7 Min Workout",
+      habitPic: "water.png",
+      habitCategory: "Physical",
+      habitTime: 420,
+      flexible: false,
+      minSec: 420
+    ),
+    Habit(
+      habitName: "Cold Shower",
+      habitPic: "water.png",
+      habitCategory: "Physical",
+      habitTime: 420,
+      flexible: true,
+      minSec: 180
+    ),
+    Habit(
+      habitName: "Brush/Floss",
+      habitPic: "water.png",
+      habitCategory: "Physical",
+      habitTime: 180,
+      flexible: true,
+      minSec: 60
+    ),
+    Habit(
+      habitName: "Meditate",
+      habitPic: "water.png",
+      habitCategory: "Spiritual",
+      habitTime: 300,
+      flexible: true,
+      minSec: 60
+    ),
+    Habit(
+      habitName: "Time with God",
+      habitPic: "water.png",
+      habitCategory: "Spiritual",
+      habitTime: 1200,
+      flexible: true,
+      minSec: 300
+    ),
+    Habit(
+      habitName: "Breakfast",
+      habitPic: "water.png",
+      habitCategory: "Physical",
+      habitTime: 600,
+      flexible: true,
+      minSec: 300
+    ),
+    Habit(
+      habitName: "Read",
+      habitPic: "water.png",
+      habitCategory: "Mental",
+      habitTime: 900,
+      flexible: true,
+      minSec: 300
+    ),
+    Habit(
+      habitName: "Morning Pages",
+      habitPic: "water.png",
+      habitCategory: "Mental",
+      habitTime: 900,
+      flexible: true,
+      minSec: 180
+    ),
+    Habit(
+      habitName: "Daily Goals",
+      habitPic: "water.png",
+      habitCategory: "Mental",
+      habitTime: 300,
+      flexible: true,
+      minSec: 180
+    )
   ]
   var timer = 0
   var task = 0
@@ -39,7 +119,6 @@ class RoutineViewController: UIViewController {
       taskCompletedButton.layer.cornerRadius = 10
       taskCompletedButton.layer.borderWidth = 1
       taskCompletedButton.layer.borderColor = UIColor.whiteColor().CGColor
-      myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countdown"), userInfo: nil, repeats: true)
       populateView(data[task])
     }
 
@@ -72,26 +151,36 @@ class RoutineViewController: UIViewController {
   }
   
   func stringFromTimer(time:Int) -> String{
-    let seconds = timer % 60
-    let minutes = (timer / 60) % 60
-    return String(format: "%0.2d:%0.2d", minutes, seconds)
+    let seconds = time % 60
+    let minutes = (time / 60) % 60
+    return String(format: "%0.1d:%0.2d", minutes, seconds)
   }
+  
+//  func stringFromTime(time:Int) -> String{
+//    let seconds = time % 60
+//    let minutes = (time / 60) % 60
+//    return String(format: "%0.1d:%0.2d", minutes, seconds)
+//  }
   
   func populateView(habit:Habit) -> () {
     self.view.backgroundColor = UIColor(patternImage: UIImage(named: habit.habitPic)!)
     self.habitLabel.text = habit.habitName
+    self.habitTimeLabel.text = stringFromTimer(habit.habitTime)
     timer = habit.habitTime
+    myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countdown"), userInfo: nil, repeats: true)
   }
   
   func newHabit() -> (){
     task++
     if(task < data.count){
+      myTimer!.invalidate()
+      myTimer = nil
       populateView(data[task])
     }
     else{
       myTimer!.invalidate()
       self.habitTimeLabel.text = ""
-      self.habitLabel.text = "8 days in a row!"
+      self.habitLabel.text = "On with your day!"
       cancelButton.hidden = true
       skipButton.hidden = true
       taskCompletedButton.hidden = true
@@ -100,11 +189,14 @@ class RoutineViewController: UIViewController {
       doneButton.layer.borderWidth = 1
       doneButton.layer.borderColor = UIColor.whiteColor().CGColor
       doneButton.hidden = false
-      
     }
   }
   
   @IBAction func donePushed(sender: AnyObject) {
+    ViewController.GlobalVariables.yourVariable += 1
+    ViewController.GlobalVariables.data.setInteger(ViewController.GlobalVariables.yourVariable, forKey: "streakCount")
+    ViewController.GlobalVariables.timeSinceLastSuccess = 0
+    NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
     self.dismissViewControllerAnimated(true, completion: nil)
   }
 }
