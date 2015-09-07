@@ -16,6 +16,7 @@
 		838F07431B84C8B9004F1E22 /* RoutinesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F07421B84C8B9004F1E22 /* RoutinesUITests.swift */; };
 		838F07511B84DED5004F1E22 /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F07501B84DED5004F1E22 /* RoutineViewController.swift */; };
 		838F07531B84E329004F1E22 /* routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F07521B84E329004F1E22 /* routine.swift */; };
+		B4ABCE2A01F91A1193B97859 /* Pods_Routines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9CE422CF065064FED487E3 /* Pods_Routines.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29350B0171DB4F5D92A3FA58 /* Pods-Routines.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Routines.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Routines/Pods-Routines.debug.xcconfig"; sourceTree = "<group>"; };
+		3E9CE422CF065064FED487E3 /* Pods_Routines.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Routines.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		838F071F1B84C8B9004F1E22 /* Routines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Routines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838F07221B84C8B9004F1E22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838F07241B84C8B9004F1E22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 		838F07441B84C8B9004F1E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838F07501B84DED5004F1E22 /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
 		838F07521B84E329004F1E22 /* routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = routine.swift; sourceTree = "<group>"; };
+		83C94B361B9DE4B70068CB94 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		986884753262790BDD27B583 /* Pods-Routines.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Routines.release.xcconfig"; path = "Pods/Target Support Files/Pods-Routines/Pods-Routines.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4ABCE2A01F91A1193B97859 /* Pods_Routines.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184451662CD26C698085D1D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E9CE422CF065064FED487E3 /* Pods_Routines.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		838F07161B84C8B8004F1E22 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				838F07361B84C8B9004F1E22 /* RoutinesTests */,
 				838F07411B84C8B9004F1E22 /* RoutinesUITests */,
 				838F07201B84C8B9004F1E22 /* Products */,
+				EB96006003DD6A93C329A1A5 /* Pods */,
+				184451662CD26C698085D1D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +123,7 @@
 				838F07521B84E329004F1E22 /* routine.swift */,
 				838F07291B84C8B9004F1E22 /* Assets.xcassets */,
 				838F07501B84DED5004F1E22 /* RoutineViewController.swift */,
+				83C94B361B9DE4B70068CB94 /* BridgingHeader.h */,
 				838F072B1B84C8B9004F1E22 /* LaunchScreen.storyboard */,
 				838F072E1B84C8B9004F1E22 /* Info.plist */,
 			);
@@ -131,6 +148,15 @@
 			path = RoutinesUITests;
 			sourceTree = "<group>";
 		};
+		EB96006003DD6A93C329A1A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29350B0171DB4F5D92A3FA58 /* Pods-Routines.debug.xcconfig */,
+				986884753262790BDD27B583 /* Pods-Routines.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 838F07471B84C8B9004F1E22 /* Build configuration list for PBXNativeTarget "Routines" */;
 			buildPhases = (
+				E8BCF79CABD51F564B947905 /* Check Pods Manifest.lock */,
 				838F071B1B84C8B8004F1E22 /* Sources */,
 				838F071C1B84C8B8004F1E22 /* Frameworks */,
 				838F071D1B84C8B8004F1E22 /* Resources */,
+				ABEDD54F5E939234468574D4 /* Embed Pods Frameworks */,
+				CCC2EC65ADFE645D8B3CC106 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +222,7 @@
 		838F07171B84C8B8004F1E22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Asaph Yuan";
 				TargetAttributes = {
@@ -256,6 +286,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABEDD54F5E939234468574D4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Routines/Pods-Routines-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCC2EC65ADFE645D8B3CC106 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Routines/Pods-Routines-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8BCF79CABD51F564B947905 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		838F071B1B84C8B8004F1E22 /* Sources */ = {
@@ -403,31 +481,41 @@
 		};
 		838F07481B84C8B9004F1E22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29350B0171DB4F5D92A3FA58 /* Pods-Routines.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Routines/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asaphyuan.Routines;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Routines/BridgingHeader.h;
 			};
 			name = Debug;
 		};
 		838F07491B84C8B9004F1E22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 986884753262790BDD27B583 /* Pods-Routines.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Routines/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asaphyuan.Routines;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Routines/BridgingHeader.h;
 			};
 			name = Release;
 		};

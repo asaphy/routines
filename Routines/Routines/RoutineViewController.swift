@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import JWGCircleCounter
 
 class RoutineViewController: UIViewController {
 
   @IBOutlet weak var habitTimeLabel: UILabel!
   @IBOutlet weak var habitLabel: UILabel!
-  
+
+  let circleCounter = JWGCircleCounter(frame: CGRect(x: 85, y: 230, width: 150, height: 150))
+
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var taskCompletedButton: UIButton!
   @IBOutlet weak var skipButton: UIButton!
@@ -168,6 +171,11 @@ class RoutineViewController: UIViewController {
     self.habitTimeLabel.text = stringFromTimer(habit.habitTime)
     timer = habit.habitTime
     myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countdown"), userInfo: nil, repeats: true)
+    self.view.addSubview(circleCounter)
+    circleCounter.startWithSeconds(habit.habitTime)
+    circleCounter.circleColor = UIColor.whiteColor()
+    circleCounter.circleBackgroundColor = UIColor(red:100/255.0, green:100/255.0, blue:100/255.0, alpha:0.5)
+    circleCounter.circleTimerWidth = 1.0
   }
   
   func newHabit() -> (){
@@ -183,6 +191,7 @@ class RoutineViewController: UIViewController {
       self.habitLabel.text = "On with your day!"
       cancelButton.hidden = true
       skipButton.hidden = true
+      circleCounter.hidden = true
       taskCompletedButton.hidden = true
       doneButton.backgroundColor = UIColor.clearColor()
       doneButton.layer.cornerRadius = 10
