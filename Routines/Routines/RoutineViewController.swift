@@ -275,9 +275,22 @@ class RoutineViewController: UIViewController {
   }
   
   @IBAction func donePushed(sender: AnyObject) {
-    ViewController.GlobalVariables.yourVariable += 1
-    ViewController.GlobalVariables.data.setInteger(ViewController.GlobalVariables.yourVariable, forKey: "streakCount")
-    ViewController.GlobalVariables.timeSinceLastSuccess = 0
+    let currentDate = NSDate()
+    if (currentDate.secondsFrom(ViewController.GlobalVariables.previousDate) > 57600 && currentDate.secondsFrom(ViewController.GlobalVariables.previousDate) < 115200){
+      ViewController.GlobalVariables.yourVariable += 1
+      ViewController.GlobalVariables.data.setInteger(ViewController.GlobalVariables.yourVariable, forKey: "streakCount")
+      ViewController.GlobalVariables.timeSinceLastSuccess = 0
+      ViewController.GlobalVariables.previousDate = NSDate()
+    }
+    else if (currentDate.secondsFrom(ViewController.GlobalVariables.previousDate) >= 115200){
+      ViewController.GlobalVariables.yourVariable = 1
+      ViewController.GlobalVariables.data.setInteger(ViewController.GlobalVariables.yourVariable, forKey: "streakCount")
+      ViewController.GlobalVariables.timeSinceLastSuccess = 0
+      ViewController.GlobalVariables.previousDate = NSDate()
+    }
+    else{
+      
+    }
     NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
     self.dismissViewControllerAnimated(true, completion: nil)
   }

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     static var yourVariable = 0
     static var data = NSUserDefaults.standardUserDefaults()
     static var timeSinceLastSuccess = 0
+    static var previousDate: NSDate = NSDate()
   }
   @IBOutlet weak var startMorningButton: UIButton!
   @IBOutlet weak var newRoutineButton: UIButton!
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
     if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
       //Put any code here and it will be executed only once.
       GlobalVariables.data.setInteger(0, forKey: "streakCount")
+      GlobalVariables.previousDate = NSDate()
       NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
     }
     GlobalVariables.yourVariable = GlobalVariables.data.integerForKey("streakCount")
