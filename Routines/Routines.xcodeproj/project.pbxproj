@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8358EB081BA21A3500DF214A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358EB071BA21A3500DF214A /* AudioToolbox.framework */; };
+		8358EB0B1BA21D0600DF214A /* timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8358EB0A1BA21D0600DF214A /* timer.mp3 */; };
 		838F07231B84C8B9004F1E22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F07221B84C8B9004F1E22 /* AppDelegate.swift */; };
 		838F07251B84C8B9004F1E22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F07241B84C8B9004F1E22 /* ViewController.swift */; };
 		838F07281B84C8B9004F1E22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838F07261B84C8B9004F1E22 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		29350B0171DB4F5D92A3FA58 /* Pods-Routines.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Routines.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Routines/Pods-Routines.debug.xcconfig"; sourceTree = "<group>"; };
 		3E9CE422CF065064FED487E3 /* Pods_Routines.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Routines.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8358EB071BA21A3500DF214A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8358EB0A1BA21D0600DF214A /* timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timer.mp3; sourceTree = "<group>"; };
 		838F071F1B84C8B9004F1E22 /* Routines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Routines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838F07221B84C8B9004F1E22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838F07241B84C8B9004F1E22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8358EB081BA21A3500DF214A /* AudioToolbox.framework in Frameworks */,
 				B4ABCE2A01F91A1193B97859 /* Pods_Routines.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,9 +92,18 @@
 		184451662CD26C698085D1D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8358EB071BA21A3500DF214A /* AudioToolbox.framework */,
 				3E9CE422CF065064FED487E3 /* Pods_Routines.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8358EB091BA21CF400DF214A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8358EB0A1BA21D0600DF214A /* timer.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		838F07161B84C8B8004F1E22 = {
@@ -119,6 +133,7 @@
 			children = (
 				838F07221B84C8B9004F1E22 /* AppDelegate.swift */,
 				838F07241B84C8B9004F1E22 /* ViewController.swift */,
+				8358EB091BA21CF400DF214A /* Sounds */,
 				838F07261B84C8B9004F1E22 /* Main.storyboard */,
 				838F07521B84E329004F1E22 /* routine.swift */,
 				838F07291B84C8B9004F1E22 /* Assets.xcassets */,
@@ -265,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8358EB0B1BA21D0600DF214A /* timer.mp3 in Resources */,
 				838F072D1B84C8B9004F1E22 /* LaunchScreen.storyboard in Resources */,
 				838F072A1B84C8B9004F1E22 /* Assets.xcassets in Resources */,
 				838F07281B84C8B9004F1E22 /* Main.storyboard in Resources */,

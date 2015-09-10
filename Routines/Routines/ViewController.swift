@@ -40,7 +40,6 @@ class ViewController: UIViewController {
 
     if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
       //Put any code here and it will be executed only once.
-      print("first")
       GlobalVariables.data.setInteger(0, forKey: "streakCount")
       NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
     }

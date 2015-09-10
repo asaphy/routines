@@ -7,7 +7,42 @@
 //
 
 import UIKit
+import AVFoundation
 import JWGCircleCounter
+
+extension NSDate {
+  func yearsFrom(date:NSDate) -> Int{
+    return NSCalendar.currentCalendar().components(.Year, fromDate: date, toDate: self, options: []).year
+  }
+  func monthsFrom(date:NSDate) -> Int{
+    return NSCalendar.currentCalendar().components(.Month, fromDate: date, toDate: self, options: []).month
+  }
+  func weeksFrom(date:NSDate) -> Int{
+    return NSCalendar.currentCalendar().components(.WeekOfYear, fromDate: date, toDate: self, options: []).weekOfYear
+  }
+  func daysFrom(date:NSDate) -> Int{
+    return NSCalendar.currentCalendar().components(.Day, fromDate: date, toDate: self, options: []).day
+  }
+  func hoursFrom(date:NSDate) -> Int{
+    return NSCalendar.currentCalendar().components(.Hour, fromDate: date, toDate: self, options: []).hour
+  }
+  func minutesFrom(date:NSDate) -> Int{
+    return NSCalendar.currentCalendar().components(.Minute, fromDate: date, toDate: self, options: []).minute
+  }
+  func secondsFrom(date:NSDate) -> Int{
+    return NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: self, options: []).second
+  }
+  func offsetFrom(date:NSDate) -> String {
+    if yearsFrom(date)   > 0 { return "\(yearsFrom(date))y"   }
+    if monthsFrom(date)  > 0 { return "\(monthsFrom(date))M"  }
+    if weeksFrom(date)   > 0 { return "\(weeksFrom(date))w"   }
+    if daysFrom(date)    > 0 { return "\(daysFrom(date))d"    }
+    if hoursFrom(date)   > 0 { return "\(hoursFrom(date))h"   }
+    if minutesFrom(date) > 0 { return "\(minutesFrom(date))m" }
+    if secondsFrom(date) > 0 { return "\(secondsFrom(date))s" }
+    return ""
+  }
+}
 
 class RoutineViewController: UIViewController {
 
@@ -15,7 +50,8 @@ class RoutineViewController: UIViewController {
   @IBOutlet weak var habitLabel: UILabel!
 
   let circleCounter = JWGCircleCounter(frame: CGRect(x: 85, y: 230, width: 150, height: 150))
-
+  let localNotification: UILocalNotification = UILocalNotification()
+  var currentTime: NSDate = NSDate()
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var taskCompletedButton: UIButton!
   @IBOutlet weak var skipButton: UIButton!
@@ -33,7 +69,7 @@ class RoutineViewController: UIViewController {
       habitName: "Water",
       habitPic: "water.png",
       habitCategory: "Physical",
-      habitTime: 180,
+      habitTime: 5,
       flexible: true,
       minSec: 60
     ),
@@ -113,7 +149,8 @@ class RoutineViewController: UIViewController {
   var timer = 0
   var task = 0
   var myTimer: NSTimer?
-  
+  var audioPlayer: AVAudioPlayer!
+  var first = true
   override func viewDidLoad() {
         super.viewDidLoad()
       doneButton.hidden = true
@@ -122,6 +159,7 @@ class RoutineViewController: UIViewController {
       taskCompletedButton.layer.cornerRadius = 10
       taskCompletedButton.layer.borderWidth = 1
       taskCompletedButton.layer.borderColor = UIColor.whiteColor().CGColor
+      setNotification(data[task])
       populateView(data[task])
     }
 
@@ -131,6 +169,8 @@ class RoutineViewController: UIViewController {
     }
   
   @IBAction func cancelButton(sender: AnyObject) {
+    myTimer!.invalidate()
+    UIApplication.sharedApplication().cancelAllLocalNotifications()
     self.dismissViewControllerAnimated(true, completion: nil)
     
   }
@@ -143,13 +183,25 @@ class RoutineViewController: UIViewController {
     newHabit()
   }
   @IBOutlet weak var doneButton: UIButton!
+  
   func countdown() {
     if (timer > 0){
       timer--
-      self.habitTimeLabel.text = stringFromTimer(timer)
+      self.habitTimeLabel.text = getDifference(currentTime)
+    }
+    else if (first){
+      self.habitTimeLabel.textColor = UIColor.redColor()
+      self.habitTimeLabel.text = "Time's Up"
+      do {
+          try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL (fileURLWithPath: NSBundle.mainBundle().pathForResource("timer", ofType: "mp3")!), fileTypeHint:nil)
+              audioPlayer.play()
+        } catch {
+          //Handle the error
+        }
+      first = false
     }
     else{
-      self.habitTimeLabel.text = "Time's Up"
+      
     }
   }
   
@@ -159,6 +211,12 @@ class RoutineViewController: UIViewController {
     return String(format: "%0.1d:%0.2d", minutes, seconds)
   }
   
+  func getDifference (var date:NSDate) -> String {
+    date = NSDate()
+    let seconds = localNotification.fireDate!.secondsFrom(date)
+    return stringFromTimer(seconds)
+  }
+
 //  func stringFromTime(time:Int) -> String{
 //    let seconds = time % 60
 //    let minutes = (time / 60) % 60
@@ -168,8 +226,11 @@ class RoutineViewController: UIViewController {
   func populateView(habit:Habit) -> () {
     self.view.backgroundColor = UIColor(patternImage: UIImage(named: habit.habitPic)!)
     self.habitLabel.text = habit.habitName
-    self.habitTimeLabel.text = stringFromTimer(habit.habitTime)
+    self.habitTimeLabel.text = stringFromTimer(habit.habitTime-1)
     timer = habit.habitTime
+    //current time
+    currentTime = NSDate()
+    getDifference(currentTime)
     myTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countdown"), userInfo: nil, repeats: true)
     self.view.addSubview(circleCounter)
     circleCounter.startWithSeconds(habit.habitTime)
@@ -178,17 +239,29 @@ class RoutineViewController: UIViewController {
     circleCounter.circleTimerWidth = 1.0
   }
   
+  func setNotification(habit:Habit) -> (){
+    localNotification.alertAction = ""
+    localNotification.alertBody = "Time's Up!"
+    localNotification.fireDate = NSDate(timeIntervalSinceNow: Double(habit.habitTime))
+    localNotification.soundName = UILocalNotificationDefaultSoundName // play default sound
+    UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+  }
+  
   func newHabit() -> (){
     task++
+    UIApplication.sharedApplication().cancelAllLocalNotifications()
+    first = true
+    self.habitTimeLabel.textColor = UIColor.whiteColor()
     if(task < data.count){
       myTimer!.invalidate()
       myTimer = nil
+      setNotification(data[task])
       populateView(data[task])
     }
     else{
       myTimer!.invalidate()
       self.habitTimeLabel.text = ""
-      self.habitLabel.text = "On with your day!"
+      self.habitLabel.text = "Well Done!"
       cancelButton.hidden = true
       skipButton.hidden = true
       circleCounter.hidden = true
